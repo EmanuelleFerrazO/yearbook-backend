@@ -4,14 +4,14 @@ const app = express();
 
 const PORT = 3000;
 
-
+// rota principal
 app.get('/', (req, res) => {
   res.json({
     mensagem: 'Yearbook API está no ar! 🎓'
   });
 });
 
-
+// desafio do aluno
 app.get('/status', (req, res) => {
   res.json({
     status: 'ok',
@@ -19,7 +19,7 @@ app.get('/status', (req, res) => {
   });
 });
 
-
+// inicia servidor
 if (process.env.VERCEL !== '1') {
   app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
